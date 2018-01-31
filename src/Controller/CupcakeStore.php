@@ -11,6 +11,17 @@
  *
  * @author admin
  */
-class CupcakeStore {
-    //put your code here
+
+namespace Drupal\cupcake_store\Controller;
+
+use Drupal\Core\Controller\ControllerBase;
+
+class CupcakeStore extends ControllerBase{
+    
+    public function content(){
+        return array(
+            '#type' => 'markup',
+            '#markup' => $this->t("Cupcake Store")
+        );
+    }
 }

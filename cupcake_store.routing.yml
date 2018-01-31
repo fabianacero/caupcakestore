@@ -1,0 +1,7 @@
+cupcake_store:
+    path: '/cupcake'
+    defaults:
+        _controller: '\Drupal\cupcake_store\Controller\CupcakeStore::content'
+        _title: 'Cupcake Store'
+    requirements:
+        _permissions: 'access content'

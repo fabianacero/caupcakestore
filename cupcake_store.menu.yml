@@ -1,0 +1,6 @@
+cupcake_store.admin:
+  title: 'Cupcake Store'
+  description: 'This is a cupcake store module'
+  parent: system.admin_config_development
+  route_name: cupcake_store.content
+  weight: 100
