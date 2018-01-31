@@ -1,0 +1,5 @@
+name: Cupcake Store
+description: This is a module to manage a cupcake shoping
+package: Custom
+type: module
+core: 8.x
