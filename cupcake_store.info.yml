@@ -1,5 +1,5 @@
 name: Cupcake Store
-description: This is a module to manage a cupcake shoping
+description: This is a module to manage a cupcake shoping for testing skills
 package: Custom
 type: module
 core: 8.x
