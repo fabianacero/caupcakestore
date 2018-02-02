@@ -1,4 +1,4 @@
-cupcake_store:
+cupcake_store.content:
     path: '/cupcake'
     defaults:
         _controller: '\Drupal\cupcake_store\Controller\CupcakeStore::content'
