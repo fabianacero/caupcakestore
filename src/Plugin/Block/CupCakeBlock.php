@@ -15,14 +15,12 @@ use Drupal\Core\Form\FormStateInterface;
  *   category = @Translation("Cupcake Store"),
  * )
  */
-class CupCakeBlock extends BlockBase implements BlockPluginInterface
-{
+class CupCakeBlock extends BlockBase implements BlockPluginInterface {
 
     /**
      * {@inheritdoc}
      */
-    public function build()
-    {
+    public function build() {
         $config = $this->getConfiguration();
         $cupCakesNumber = 0;
 
@@ -38,8 +36,17 @@ class CupCakeBlock extends BlockBase implements BlockPluginInterface
     /**
      * {@inheritdoc}
      */
-    public function blockForm($form, FormStateInterface $form_state)
-    {
+    public function defaultConfiguration() {
+        $default_config = \Drupal::config('cupcake_store.settings');
+        return [
+            'cupcakes_number' => $default_config->get('cupcake_store.number'),
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function blockForm($form, FormStateInterface $form_state) {
         $form = parent::blockForm($form, $form_state);
 
         $config = $this->getConfiguration();
@@ -57,8 +64,7 @@ class CupCakeBlock extends BlockBase implements BlockPluginInterface
     /**
      * {@inheritdoc}
      */
-    public function blockSubmit($form, FormStateInterface $form_state)
-    {
+    public function blockSubmit($form, FormStateInterface $form_state) {
         parent::blockSubmit($form, $form_state);
         $values = $form_state->getValues();
         $this->configuration['cupcakes_number'] = $values['cupcakes_number'];

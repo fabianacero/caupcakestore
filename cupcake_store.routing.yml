@@ -4,4 +4,12 @@ cupcake_store.content:
         _controller: '\Drupal\cupcake_store\Controller\CupcakeStore::content'
         _title: 'Cupcake Store'
     requirements:
-        _permissions: 'access content'
+        _access: 'TRUE'
+
+cupcake_store.form:
+    path: '/admin/config/development/cupcake_store'
+    defaults:
+        _form: 'Drupal\cupcake_store\Form\CupcakeStoreForm'
+        _title: 'Cupcake Store Settings'
+    requirements:
+        _permissions: 'administer site configuration'

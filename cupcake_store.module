@@ -1,0 +1,15 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help
+ */
+function cupcake_store_help($route_name, RouteMatchInterface $route_match){
+    
+    switch ($route_name){
+        case 'help.page.cupcake_store':
+            return t('<p>Help for this module</p>');
+            break;
+    }
+}
